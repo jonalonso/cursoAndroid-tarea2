@@ -100,7 +100,9 @@ public class NuevoElementoActivity extends AppCompatActivity {
                             intent.setData(Uri.parse(url));
                             startActivity(intent);
 
-                        }  catch (UnsupportedEncodingException e) {
+                        }  catch (Exception e) {
+                            e.printStackTrace();
+                        } catch (Error e) {
                             e.printStackTrace();
                         }
                     }
